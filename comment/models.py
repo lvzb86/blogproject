@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Comment(models.Model):
     name = models.CharField(max_length=128)
     email = models.EmailField(max_length=64)

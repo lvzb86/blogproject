@@ -9,8 +9,8 @@
     </title>
 
     <style>
-        span.highlighted{
-            color:red;
+        span.highlighted {
+            color: red;
         }
     </style>
 
@@ -49,10 +49,10 @@
                             <li class="cl-effect-11"><a href="about.html" data-hover="关于">关于</a></li>
                             <li class="cl-effect-11"><a href="contact.html" data-hover="联系">联系</a></li>
                             {% if user.is_authenticated %}
-                                <li class="cl-effect-11"><a href="{% url 'password_change' %}">修改密码</a></li>
-                                <li class="cl-effect-11"><a href="{% url 'logout' %}">Logout</a></li>
+                            <li class="cl-effect-11"><a href="{% url 'password_change' %}">修改密码</a></li>
+                            <li class="cl-effect-11"><a href="{% url 'logout' %}">Logout</a></li>
                             {% else %}
-                                <li class="cl-effect-11"><a href="{% url 'login' %}">Login</a></li>
+                            <li class="cl-effect-11"><a href="{% url 'login' %}">Login</a></li>
                             {% endif %}
                         </ul>
                     </div><!-- /.navbar-collapse -->
@@ -113,7 +113,8 @@
                     <ul>
                         {% for category in category_list %}
                         <li>
-                            <a href="{% url 'blog:category' category.pk %}">{{category.name}}<span class="post-count">({{category.num_post}})</span> </a>
+                            <a href="{% url 'blog:category' category.pk %}">{{category.name}}<span class="post-count">({{category.num_post}})</span>
+                            </a>
                         </li>
                         {% empty %}
                         没有分类
@@ -144,7 +145,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <p class="copyright">&copy 2017 - 采集自<a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a></p>
+                <p class="copyright">&copy 2017 - 采集自<a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a>
+                </p>
             </div>
         </div>
     </div>

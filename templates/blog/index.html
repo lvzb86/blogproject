@@ -36,24 +36,24 @@
         <li><a href="?page=1">1</a></li>
         {% endif %}
         {% if left %}
-            {% if left_has_more %}
-                <li><span>...</span></li>
-            {% endif %}
-            {% for i in left %}
-                <li><a href="?page={{i}}">{{i}}</a> </li>
-            {% endfor %}
+        {% if left_has_more %}
+        <li><span>...</span></li>
+        {% endif %}
+        {% for i in left %}
+        <li><a href="?page={{i}}">{{i}}</a></li>
+        {% endfor %}
         {% endif %}
         <li class="current"><a href="?page={{page_obj.number}}">{{page_obj.number}}</a></li>
         {% if right %}
-            {% for i in right %}
-                <li><a href="?page={{i}}">{{i}}</a></li>
-            {% endfor %}
-            {% if right_has_more %}
-                <li><span>...</span></li>
-            {% endif %}
+        {% for i in right %}
+        <li><a href="?page={{i}}">{{i}}</a></li>
+        {% endfor %}
+        {% if right_has_more %}
+        <li><span>...</span></li>
+        {% endif %}
         {% endif %}
         {% if last %}
-            <li><a href="?page={{paginator.num_pages}}">{{paginator.num_pages}}</a></li>
+        <li><a href="?page={{paginator.num_pages}}">{{paginator.num_pages}}</a></li>
         {% endif %}
     </ul>
 </div>
